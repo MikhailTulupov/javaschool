@@ -1,4 +1,5 @@
 rootProject.name = 'javaschool'
 include 'Task1'
 include 'Task2'
+include 'Task3'
 
