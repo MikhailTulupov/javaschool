@@ -14,19 +14,19 @@ public class VoroninTask2 {
         System.out.println("Введите число:");
         int input = sc.nextInt();
 
-        GetCurrentTimeLinearSearch(array, input);
+        getCurrentTimeLinearSearch(array, input);
         Arrays.sort(array);
-        GetCurrentTimeJumpSearch(array, input);
-        GetCurrentTimeBinarySearch(array, input);
+        getCurrentTimeJumpSearch(array, input);
+        getCurrentTimeBinarySearch(array, input);
     }
 
-    public static void GetCurrentTimeLinearSearch(int[] array, int inputNumber) {
+    public static void getCurrentTimeLinearSearch(int[] array, int inputNumber) {
         System.out.println("___LinearSearch___");
 
         long start, finish, elapsed;
         start = System.currentTimeMillis();
 
-        int iter = LinearSearch(array, inputNumber);
+        int iter = linearSearch(array, inputNumber);
 
         finish = System.currentTimeMillis();
         elapsed = start - finish;
@@ -35,13 +35,13 @@ public class VoroninTask2 {
 
     }
 
-    public static void GetCurrentTimeJumpSearch(int[] array, int inputNumber) {
+    public static void getCurrentTimeJumpSearch(int[] array, int inputNumber) {
         System.out.println("___JumpSearch___");
 
         long start, finish, elapsed;
         start = System.currentTimeMillis();
 
-        int iter = JumpSearch(array, inputNumber);
+        int iter = jumpSearch(array, inputNumber);
 
         finish = System.currentTimeMillis();
         elapsed = start - finish;
@@ -49,13 +49,13 @@ public class VoroninTask2 {
         System.out.println("Прошло времени, мс: " + elapsed);
     }
 
-    public static void GetCurrentTimeBinarySearch(int[] array, int inputNumber) {
+    public static void getCurrentTimeBinarySearch(int[] array, int inputNumber) {
         System.out.println("___BinarySearch___");
 
         long start, finish, elapsed;
         start = System.currentTimeMillis();
 
-        int iter = BinarySearch(array, inputNumber);
+        int iter = binarySearch(array, inputNumber);
 
         finish = System.currentTimeMillis();
         elapsed = start - finish;
@@ -72,7 +72,7 @@ public class VoroninTask2 {
     }
 
 
-    public static int LinearSearch(int[] array, int searchElement) {
+    public static int linearSearch(int[] array, int searchElement) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == searchElement) {
                 return i;
@@ -81,7 +81,7 @@ public class VoroninTask2 {
         return -1;
     }
 
-    public static int JumpSearch(int[] array, int searchElement) {
+    public static int jumpSearch(int[] array, int searchElement) {
         int step = (int) Math.sqrt(array.length);
         int prev = 0;
 
@@ -103,7 +103,7 @@ public class VoroninTask2 {
         return -1;
     }
 
-    public static int BinarySearch(int[] array, int searchElement) {
+    public static int binarySearch(int[] array, int searchElement) {
 
         int minIndex = 0;
         int maxIndex = array.length - 1;
