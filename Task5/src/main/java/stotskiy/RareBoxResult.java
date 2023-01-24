@@ -4,15 +4,15 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 /**
- * Класс возвращающий награду пользователя за открытие
- * редкого (rare) бокса
+ *A class that returns the user's reward for opening
+ * rare boxing
  * */
 public class RareBoxResult implements AbstractOpenBox {
     private final String rt;
     public int backspin;
 
     /**
-     * @param backspin - значение увеличивающие шанс выпадения редкого дропа
+     * @param backspin -the value increases the chance of a rare drop
      * */
     public RareBoxResult(int backspin){
         this.backspin = backspin;
@@ -21,8 +21,8 @@ public class RareBoxResult implements AbstractOpenBox {
 
 
     /**
-     * Метод генерации сслучайного числа
-     * @return возвращает число для дальнейшего выбора лута
+     * Method of generating a random number
+     * @return - a number for further loot selection
      * */
     private int generate(){
         Random random = new Random();
@@ -42,17 +42,17 @@ public class RareBoxResult implements AbstractOpenBox {
     }
 
     /**
-     * Возвращает выпавщую вещь мз сундука
-     * @param val - значение выпавшего рандомного числа
-     * @return - вещь (лут)
+     * Returns the missing item from the chest
+     * @param val -the value of the random number that fell out
+     * @return - thing (loot)
      * */
     private String getLoot(int val){
-       return "Вам выпало:" + switch (val){
-            case 1 -> "Мечь всадника апокалипсиса";
-            case 2 -> "Крушитель черепов";
-            case 3 -> "Заостренный мечь";
-            case 4 -> "Пылки тупой мечь";
-            default -> "50 золотых оренов";
+       return "You fell out:" + switch (val){
+            case 1 -> "Sword of the Horseman of the Apocalypse";
+            case 2 -> "The Skull Crasher";
+            case 3 -> "A sharpened sword";
+            case 4 -> "Ply a blunt sword";
+            default -> "50 GOLD Orens";
         };
     }
 

@@ -1,7 +1,9 @@
 package stotskiy;
+
 /**
- * Интрефейс для получения значения чего-либо
+ * An interface for getting the value of something
  * */
+
 public interface AbstractOpenBox {
     String result();
 }

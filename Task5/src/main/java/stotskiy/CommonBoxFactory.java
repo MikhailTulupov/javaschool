@@ -1,16 +1,18 @@
 package stotskiy;
 /**
- * Создание (генерация) обычного лутбокса
+ *
+ * Creating (generating) a common loot box
  * */
+
 public class CommonBoxFactory implements AbstractFabricLootBox{
     @Override
     public AbstractOpenBox createAbstractOpen() {
         System.out.println("____Create Common box____\n" +
-                "В сундуке содержиться:\n" +
-                "1.Кипа карт\n" +
-                "2.Тупой сай\n" +
-                "3.Святой тупой мечь (Epic)\n" +
-                "4. 10 оренов\n" +
+                "The chest contains:\n" +
+                "1.A pile of cards\n" +
+                "2.Blunt sword\n" +
+                "3.Holy Blunt Sword (Epic)\n" +
+                "4. 10 Oren\n" +
                 "___________________________"
         );
         return new CommonBoxResult();

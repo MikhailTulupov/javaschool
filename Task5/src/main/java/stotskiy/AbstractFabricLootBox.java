@@ -1,7 +1,7 @@
 package stotskiy;
 
 /**
- *  Интрефейс (основной) для создания лут боксов
+ * Interface (main) for creating loot boxes
  */
 public interface AbstractFabricLootBox {
     AbstractOpenBox createAbstractOpen();

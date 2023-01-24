@@ -1,8 +1,8 @@
 package stotskiy;
 
 /**
- * Класс возвращающий награду пользователя за открытие
- * обычного (common) бокса
+ * A class that returns the user's reward for opening
+ * regular (common) boxing
  * */
 public class CommonBoxResult implements AbstractOpenBox {
     private final String st;
@@ -14,16 +14,16 @@ public class CommonBoxResult implements AbstractOpenBox {
     }
 
     /**
-     * Возвращает выпавщую вещь мз сундука
-     * @param value - значение диапазона
-     * @return - вещь (лут)
+     * Returns the missing item from the chest
+     * @param value - range value
+     * @return - thing (loot)
      */
     private String getLoot(int value) {
-        return "Вам выпало:" + switch (value / 150) {
-            case 0 -> "Кипа карт";
-            case 1 -> "Тупой сай";
-            case 2 -> "Святой тупой мечь";
-            default -> "10 золотых оренов";
+        return "You fell out:" + switch (value / 150) {
+            case 0 -> "A pile of cards";
+            case 1 -> "Blunt sword";
+            case 2 -> "Holy Blunt Sword";
+            default -> "10 GOLD Orens";
         };
     }
 
