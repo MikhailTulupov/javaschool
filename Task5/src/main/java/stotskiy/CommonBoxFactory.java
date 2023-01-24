@@ -1,16 +1,16 @@
 package stotskiy;
 /**
- * РЎРѕР·РґР°РЅРёРµ (РіРµРЅРµСЂР°С†РёСЏ) РѕР±С‹С‡РЅРѕРіРѕ Р»СѓС‚Р±РѕРєСЃР°
+ * Создание (генерация) обычного лутбокса
  * */
 public class CommonBoxFactory implements AbstractFabricLootBox{
     @Override
     public AbstractOpenBox createAbstractOpen() {
         System.out.println("____Create Common box____\n" +
-                "Р’ СЃСѓРЅРґСѓРєРµ СЃРѕРґРµСЂР¶РёС‚СЊСЃСЏ:\n" +
-                "1.РљРёРїР° РєР°СЂС‚\n" +
-                "2.РўСѓРїРѕР№ СЃР°Р№\n" +
-                "3.РЎРІСЏС‚РѕР№ С‚СѓРїРѕР№ РјРµС‡СЊ (Epic)\n" +
-                "4. 10 РѕСЂРµРЅРѕРІ\n" +
+                "В сундуке содержиться:\n" +
+                "1.Кипа карт\n" +
+                "2.Тупой сай\n" +
+                "3.Святой тупой мечь (Epic)\n" +
+                "4. 10 оренов\n" +
                 "___________________________"
         );
         return new CommonBoxResult();

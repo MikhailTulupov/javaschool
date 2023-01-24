@@ -1,11 +1,11 @@
 package stotskiy;
 
 /**
- * РљР»Р°СЃСЃ РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РЅР°РіСЂР°РґСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Р·Р° РѕС‚РєСЂС‹С‚РёРµ
- * РѕР±С‹С‡РЅРѕРіРѕ (common) Р±РѕРєСЃР°
+ * Класс возвращающий награду пользователя за открытие
+ * обычного (common) бокса
  * */
 public class CommonBoxResult implements AbstractOpenBox {
-    private String st;
+    private final String st;
 
     public CommonBoxResult() {
         int max = 450;
@@ -14,16 +14,16 @@ public class CommonBoxResult implements AbstractOpenBox {
     }
 
     /**
-     * Р’РѕР·РІСЂР°С‰Р°РµС‚ РІС‹РїР°РІС‰СѓСЋ РІРµС‰СЊ РјР· СЃСѓРЅРґСѓРєР°
-     * @param value - Р·РЅР°С‡РµРЅРёРµ РґРёР°РїР°Р·РѕРЅР°
-     * @return - РІРµС‰СЊ (Р»СѓС‚)
+     * Возвращает выпавщую вещь мз сундука
+     * @param value - значение диапазона
+     * @return - вещь (лут)
      */
     private String getLoot(int value) {
-        return "Р’Р°Рј РІС‹РїР°Р»Рѕ:" + switch (value / 150) {
-            case 0 -> "РљРёРїР° РєР°СЂС‚";
-            case 1 -> "РўСѓРїРѕР№ СЃР°Р№";
-            case 2 -> "РЎРІСЏС‚РѕР№ С‚СѓРїРѕР№ РјРµС‡СЊ";
-            default -> "10 Р·РѕР»РѕС‚С‹С… РѕСЂРµРЅРѕРІ";
+        return "Вам выпало:" + switch (value / 150) {
+            case 0 -> "Кипа карт";
+            case 1 -> "Тупой сай";
+            case 2 -> "Святой тупой мечь";
+            default -> "10 золотых оренов";
         };
     }
 

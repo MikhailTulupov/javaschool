@@ -1,7 +1,7 @@
 package stotskiy;
 
 /**
- *  РРЅС‚СЂРµС„РµР№СЃ (РѕСЃРЅРѕРІРЅРѕР№) РґР»СЏ СЃРѕР·РґР°РЅРёСЏ Р»СѓС‚ Р±РѕРєСЃРѕРІ
+ *  Интрефейс (основной) для создания лут боксов
  */
 public interface AbstractFabricLootBox {
     AbstractOpenBox createAbstractOpen();
