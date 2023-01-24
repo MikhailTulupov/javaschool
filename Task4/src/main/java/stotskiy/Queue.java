@@ -6,7 +6,7 @@ package stotskiy;
 public class Queue<T> {
     private final int size;
     private final T[] array;
-    private int start,end;
+    private int start =-1, end = -1;
 
     /**
      * Конструктор класса Queue
@@ -15,7 +15,6 @@ public class Queue<T> {
     Queue(int size){
         this.size = size;
         this.array = (T[]) new Object[size];
-        this.start = this.end = -1;
     }
 
     /**
@@ -43,7 +42,7 @@ public class Queue<T> {
         if(isEmpty()){
             throw new ArrayIndexOutOfBoundsException("Queue is empty");
         }
-        if(start>=end)
+        if(start>end)
             start = end = -1;
 
         return array[start++];

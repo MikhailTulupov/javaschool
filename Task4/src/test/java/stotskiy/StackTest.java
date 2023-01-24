@@ -14,7 +14,7 @@ class StackTest {
     }
 
     @Test
-    public void test_push_overflow() {
+    public void testPushOverflow() {
         stack.push(2);
         stack.push(3);
         stack.push(4);
@@ -22,17 +22,17 @@ class StackTest {
     }
 
     @Test
-    public void test_pop_empty() {
+    public void testPopEmpty() {
         assertThrows(ArrayIndexOutOfBoundsException.class, ()-> stack.pop());
     }
 
     @Test
-    public void test_top_empty() {
+    public void testTopEmpty() {
         assertThrows(ArrayIndexOutOfBoundsException.class, ()-> stack.top());
     }
 
     @Test
-    public void test_top_equals_pop(){
+    public void testTopEqualsPop(){
         stack.push(5);
         assertEquals(stack.top(),stack.pop());
     }

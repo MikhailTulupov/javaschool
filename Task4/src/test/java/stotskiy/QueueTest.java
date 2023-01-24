@@ -14,7 +14,7 @@ class QueueTest {
     }
 
     @Test
-    public void test_enqueue_full() {
+    public void testEnqueueFull() {
         queue.enqueue(5);
         queue.enqueue(6);
         queue.enqueue(7);
@@ -22,23 +22,23 @@ class QueueTest {
     }
 
     @Test
-    public void test_dequeue_empty() {
+    public void testDequeueEmpty() {
         assertThrows(ArrayIndexOutOfBoundsException.class, ()-> queue.dequeue());
     }
 
     @Test
-    public void test_top_empty() {
+    public void testTopEmpty() {
         assertThrows(ArrayIndexOutOfBoundsException.class, ()-> queue.dequeue());
     }
 
     @Test
-    public void test_top_equals_dequeue(){
+    public void testTopEqualsDequeue(){
         queue.enqueue(5);
-        assertEquals(queue.dequeue(),queue.top());
+        assertEquals(queue.top(),queue.dequeue());
     }
 
     @Test
-    public void test_dequeue_order(){
+    public void testDequeueOrder(){
         int i = 5;
         queue.enqueue(i);
         queue.enqueue(2);
