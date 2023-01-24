@@ -9,7 +9,7 @@ class QueueTest {
     Queue<Integer> queue;
 
     @BeforeEach
-    public void createStack(){
+    public void createQueue(){
         queue = new Queue<>(3);
     }
 
@@ -62,27 +62,27 @@ class QueueTest {
 
     @Test
     public void testEmptyQueue(){
-        assertTrue(queue.is_empty());
+        assertTrue(queue.isEmpty());
 
         queue.enqueue(10).enqueue(20);
         queue.dequeue();
         queue.dequeue();
 
-        assertTrue(queue.is_empty());
+        assertTrue(queue.isEmpty());
     }
 
     @Test
     public void testFullQueue(){
         queue.enqueue(10).enqueue(20).enqueue(30);
 
-        assertTrue(queue.is_full());
+        assertTrue(queue.isFull());
     }
 
     @Test
     public void testZeroQueue(){
         Queue<Object> zQueue = new Queue<>(0);
-        assertTrue(zQueue.is_full());
-        assertTrue(zQueue.is_empty());
+        assertTrue(zQueue.isFull());
+        assertTrue(zQueue.isEmpty());
         assertNull(zQueue.top());
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> zQueue.enqueue(10));
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> zQueue.dequeue());

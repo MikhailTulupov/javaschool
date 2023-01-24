@@ -64,18 +64,18 @@ class StackTest {
 
     @Test
     public void testEmptyStack(){
-        assertTrue(stack.is_empty());
+        assertTrue(stack.isEmpty());
 
         stack.push(1);
         stack.pop();
 
-        assertTrue(stack.is_empty());
+        assertTrue(stack.isEmpty());
     }
 
     @Test
     public void testZeroSizeStack(){
         Stack<Object> zStack = new Stack<>(0);
-        assertTrue(zStack.is_empty());
+        assertTrue(zStack.isEmpty());
         assertNull(zStack.top());
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> zStack.push(10));
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> zStack.pop());

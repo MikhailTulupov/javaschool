@@ -28,7 +28,7 @@ public class Queue<T> {
      * @throws ArrayIndexOutOfBoundsException if the queue is full.
      */
     public Queue<T> enqueue(T elem) throws ArrayIndexOutOfBoundsException{
-        if (is_full())
+        if (isFull())
             throw new ArrayIndexOutOfBoundsException("Queue is full");
 
         if (head == -1)
@@ -43,7 +43,7 @@ public class Queue<T> {
      * @throws ArrayIndexOutOfBoundsException if the queue is empty.
      */
     public T dequeue() throws ArrayIndexOutOfBoundsException{
-        if (is_empty())
+        if (isEmpty())
             throw new ArrayIndexOutOfBoundsException("Queue is empty");
 
         T val = storage[head++];
@@ -60,20 +60,20 @@ public class Queue<T> {
      * @return next element in the queue or null if queue is empty.
      */
     public T top() {
-        return !is_empty() ? storage[head] : null;
+        return !isEmpty() ? storage[head] : null;
     }
 
     /**
      * @return boolean.
      */
-    public boolean is_empty(){
+    public boolean isEmpty(){
         return head == -1;
     }
 
     /**
      * @return boolean.
      */
-    public boolean is_full(){
+    public boolean isFull(){
         return tail == size - 1;
     }
 }

@@ -37,7 +37,7 @@ public class Stack<T> {
      * @throws ArrayIndexOutOfBoundsException in case of empty stack.
      */
     public T pop() throws ArrayIndexOutOfBoundsException {
-        if (is_empty())
+        if (isEmpty())
             throw new ArrayIndexOutOfBoundsException("Stack is empty");
         return storage[pointer--];
     }
@@ -46,13 +46,13 @@ public class Stack<T> {
      * @return element at the top of the stack or null if stack is empty.
      */
     public T top() {
-        return !is_empty() ? storage[pointer] : null;
+        return !isEmpty() ? storage[pointer] : null;
     }
 
     /**
      * @return boolean.
      */
-    public boolean is_empty() {
+    public boolean isEmpty() {
         return pointer == -1;
     }
 }
