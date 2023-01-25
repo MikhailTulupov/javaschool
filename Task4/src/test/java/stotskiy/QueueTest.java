@@ -9,7 +9,7 @@ class QueueTest {
     Queue<Integer> queue;
 
     @BeforeEach
-    public void init(){
+    public void init() {
         queue = new Queue<>(3);
     }
 
@@ -18,27 +18,27 @@ class QueueTest {
         queue.enqueue(5);
         queue.enqueue(6);
         queue.enqueue(7);
-        assertThrows(ArrayIndexOutOfBoundsException.class, ()-> queue.enqueue(100));
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> queue.enqueue(100));
     }
 
     @Test
     public void testDequeueEmpty() {
-        assertThrows(ArrayIndexOutOfBoundsException.class, ()-> queue.dequeue());
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> queue.dequeue());
     }
 
     @Test
     public void testTopEmpty() {
-        assertThrows(ArrayIndexOutOfBoundsException.class, ()-> queue.dequeue());
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> queue.dequeue());
     }
 
     @Test
-    public void testTopEqualsDequeue(){
+    public void testTopEqualsDequeue() {
         queue.enqueue(5);
-        assertEquals(queue.top(),queue.dequeue());
+        assertEquals(queue.top(), queue.dequeue());
     }
 
     @Test
-    public void testDequeueOrder(){
+    public void testDequeueOrder() {
         int i = 5;
         queue.enqueue(i);
         queue.enqueue(2);
