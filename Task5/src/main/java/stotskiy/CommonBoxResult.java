@@ -3,7 +3,7 @@ package stotskiy;
 /**
  * A class that returns the user's reward for opening
  * regular (common) boxing
- * */
+ */
 public class CommonBoxResult implements AbstractOpenBox {
     private final String st;
 

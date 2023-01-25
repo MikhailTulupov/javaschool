@@ -1,6 +1,7 @@
 package stotskiy;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import stotskiy.*;
 
@@ -22,13 +23,13 @@ public class TestAbstractFabric {
     }
 
     @Test
-    public void testOpenRareLootBoxResult(){
+    public void testOpenRareLootBoxResult() {
         AbstractOpenBox rare = new RareBoxResult(10);
         assertNotNull(rare.result());
     }
 
     @Test
-    public void testOpenCommonLootBoxResult(){
+    public void testOpenCommonLootBoxResult() {
         AbstractOpenBox common = new CommonBoxResult();
         assertNotNull(common.result());
     }

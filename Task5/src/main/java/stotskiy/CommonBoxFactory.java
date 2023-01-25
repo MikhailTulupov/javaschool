@@ -1,10 +1,10 @@
 package stotskiy;
-/**
- *
- * Creating (generating) a common loot box
- * */
 
-public class CommonBoxFactory implements AbstractFabricLootBox{
+/**
+ * Creating (generating) a common loot box
+ */
+
+public class CommonBoxFactory implements AbstractFabricLootBox {
     @Override
     public AbstractOpenBox createAbstractOpen() {
         System.out.println("____Create Common box____\n" +

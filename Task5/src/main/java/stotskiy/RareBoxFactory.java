@@ -1,8 +1,9 @@
 package stotskiy;
+
 /**
  * Creating (generating) a rare loot box
- * */
-public class RareBoxFactory implements AbstractFabricLootBox{
+ */
+public class RareBoxFactory implements AbstractFabricLootBox {
     @Override
     public AbstractOpenBox createAbstractOpen() {
         System.out.println("____Create Rare box____\n" +
