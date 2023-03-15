@@ -19,7 +19,7 @@ public class Vector {
         return vector1.x * vector2.x + vector1.y * vector2.y + vector1.z * vector2.z;
     }
 
-    public static Vector vectornoeProizvidenee (Vector vec1, Vector vec2) {
+    public static Vector vectornoeProizvidenee(Vector vec1, Vector vec2) {
         return new Vector(vec1.y * vec2.z - vec1.z * vec2.y,
                 vec1.z * vec2.x - vec1.x * vec2.z,
                 vec1.x * vec2.y - vec1.y * vec2.x);
@@ -29,13 +29,13 @@ public class Vector {
         return Vector.scalarnoeProizvidenee(vec1, vec2) / (vec1.length() * vec2.length());
     }
 
-    public  static Vector summa(Vector vec1, Vector vec2) {
+    public static Vector summa(Vector vec1, Vector vec2) {
         return new Vector(vec1.x + vec2.x,
                 vec1.y + vec2.y,
                 vec1.z + vec2.z);
     }
 
-    public static Vector raznica (Vector vec1, Vector vec2) {
+    public static Vector raznica(Vector vec1, Vector vec2) {
         return new Vector(vec1.x - vec2.x,
                 vec1.y - vec2.y,
                 vec1.z - vec2.z);
@@ -48,4 +48,5 @@ public class Vector {
             vecarr[i] = new Vector(rnd.nextInt(), rnd.nextInt(), rnd.nextInt());
         }
         return vecarr;
+    }
 }
