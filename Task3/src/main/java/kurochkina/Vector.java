@@ -71,7 +71,7 @@ public class Vector {
 
     @Override
     public String toString() {
-        return "Vector{" +
+        return "Veсtor{" +
                 "x=" + x +
                 ", y=" + y +
                 ", z=" + z +
